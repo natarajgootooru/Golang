@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1016,
+    "userName": "Raj",
+    "occupation": "Engineer",
+    "contact": {
+      "Email": "raj@abc.com",
+      "Mobile": 12345
+    }
+  },
+  {
+    "id": 2014,
+    "userName": "John",
+    "occupation": "Teacher",
+    "contact": {
+      "Email": "john@abc.com",
+      "Mobile": 456786
+    }
+  },
+  {
+    "id": 1016,
+    "userName": "Abhi",
+    "occupation": "Police",
+    "contact": {
+      "Email": "abhi@abc.com",
+      "Mobile": 6745890
+    }
+  }
+]
