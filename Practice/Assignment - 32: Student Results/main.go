@@ -31,7 +31,7 @@ func main() {
 	// declare a variable to hold max marks
 	maxMarks := 0
 	// declare a variable to hold toper
-	var toper StudentMarks
+	var topper StudentMarks
 	// iterate through the slice to find the toper
 	for _, s := range students {
 		// calculate total marks
@@ -41,9 +41,9 @@ func main() {
 			// if it higher, then replace maxMarks with current total
 			maxMarks = total
 			// also track the toper
-			toper = s
+			topper = s
 		}
 	}
 	// print the result at the end
-	fmt.Printf("Toper Id: %d | Name: %s | Top Marks: %d\n", toper.id, toper.name, maxMarks)
+	fmt.Printf("Toper Id: %d | Name: %s | Top Marks: %d\n", topper.id, topper.name, maxMarks)
 }
