@@ -30,9 +30,9 @@ func main() {
 
 	// declare a variable to hold max marks
 	maxMarks := 0
-	// declare a variable to hold toper
+	// declare a variable to hold topper
 	var topper StudentMarks
-	// iterate through the slice to find the toper
+	// iterate through the slice to find the topper
 	for _, s := range students {
 		// calculate total marks
 		total := s.m_computers + s.m_english + s.m_maths + s.m_science
@@ -40,7 +40,7 @@ func main() {
 		if total > maxMarks {
 			// if it higher, then replace maxMarks with current total
 			maxMarks = total
-			// also track the toper
+			// also track the topper
 			topper = s
 		}
 	}
