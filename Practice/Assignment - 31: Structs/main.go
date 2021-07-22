@@ -27,4 +27,15 @@ func main() {
 	// 8) Try accessing struct values using its fields
 	fmt.Printf("Name: %s\n", p1.name)
 	fmt.Printf("Name: %f\n", p1.price)
+	// 9) Try creating anonymous struct, initialize it and print it onto the console.
+	v := struct {
+		name    string
+		id      int
+		address string
+	}{
+		name:    "Meg",
+		id:      1016,
+		address: "Bangalore",
+	}
+	fmt.Printf("%#v\n", v)
 }
