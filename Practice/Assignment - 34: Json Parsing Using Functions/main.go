@@ -64,17 +64,29 @@ func main() {
 	json.Unmarshal(bytes, &posts)
 	// print no of posts
 	fmt.Printf("No of posts: %d\n", len(posts))
+	// print user details and their post count
+	printUserDetails(users, posts)
+}
+
+func printUserDetails(users []User, posts []Post) {
+
 	// identify post per user
-	var userPostCountMap = map[int]int{}
-	for _, p := range posts {
-		userPostCountMap[p.UserId] = userPostCountMap[p.UserId] + 1
-	}
+	userPostCountMap := postsPerUser(posts)
 	// print user details and their post count
 	fmt.Printf("%-5s | %-30s | %-3s\n", "ID", "User Name", "No of Posts")
 	fmt.Println(strings.Repeat("-", 60))
 	for _, u := range users {
 		fmt.Printf("%-5d | %-30s | %-3d\n", u.Id, u.Name, userPostCountMap[u.Id])
 	}
+}
+
+func postsPerUser(posts []Post) map[int]int {
+
+	var userPostCountMap = map[int]int{}
+	for _, p := range posts {
+		userPostCountMap[p.UserId] = userPostCountMap[p.UserId] + 1
+	}
+	return userPostCountMap
 }
 
 func readFileContent(filePath string) ([]byte, error) {
